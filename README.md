@@ -10,7 +10,7 @@ I build AI end to end, from training models to serving them in production.
 
 ---
 
-## ⭐ Featured Projects
+## Featured Projects
 
 | | Project | What | Highlight |
 |:-:|---|---|---|
@@ -97,9 +97,9 @@ I build AI end to end, from training models to serving them in production.
 ### SKALA | SK AX
 **2026.07 ~ 2026.12**
 
-- SK AX 주관 AI/SW 실무 인재 양성 과정 참여 (진행 중)
+- SK AX 주관 AI/SW 실무 인재 양성 과정 참여
 
-### LG Aimers 9기 Phase 1 & 2 | (주)엘지경영개발원 AI연구원 (Academy Team)
+### LG Aimers 9기 Phase 1 & 2 & 3 | (주)엘지경영개발원 AI연구원
 **2026.06 ~ 2026.09**
 
 - AI/ML 이론 교육 및 온라인 해커톤 참여
@@ -117,9 +117,8 @@ I build AI end to end, from training models to serving them in production.
 ### 데이터 분석 학회 DAT | 학회장
 **2025.09 ~ 2026.06**
 
-- 한국외국어대학교 데이터 분석 학회 운영 총괄 (학회장 임기 2026.01 ~ 2026.07)
+- 한국외국어대학교 데이터 분석 학회 운영 총괄 
 - 스터디 · 캡스톤 프로젝트 기획 및 운영
-- DAT 7th Capstone Project — 제7회 캡스톤 프로젝트 대상 수상 (2026.06.04)
 
 ### 수도권연합데이터분석동아리 ITDA | 운영진
 **2026.01 ~ 2026.07**
@@ -145,18 +144,17 @@ I build AI end to end, from training models to serving them in production.
 
 ## 🏆 Awards
 
-- 🏅 **무브 해커톤** — 한국외국어대학교 · 2026.07.31
-- 🥇 **DAT 7th Capstone 대상** — 한국외국어대학교 · 2026.06.04 (제7회 캡스톤 프로젝트 대상)
-- 🏅 **HUFS LinguaTech Expo 장려상** — 한국외국어대학교 · 2025.11.19 (제2회 Insight Track Merit Prize)
+- 🏅 **LINK 대학생 연합 아이디어톤** 
+- 🥇 **DAT 7th Capstone 대상** 
+- 🏅 **HUFS LinguaTech Expo 장려상** 
 
 ---
 
 ## 📜 Certifications
 
-- 수상구조사 2급 — 해양경찰청 (2026.08)
-- SQLD (SQL개발자) — 한국데이터산업진흥원 (2025.12)
-- 컴퓨터활용능력 2급 — 대한상공회의소 (2025.09)
-
+- 수상구조사 2급 
+- SQLD 
+- 컴퓨터활용능력 2급 
 ---
 
 ## 🌐 Languages
