@@ -1,6 +1,6 @@
 # Dain Kil
 
-### AI Engineer · NLP · Model Serving
+### AI Engineer · NLP 
 
 **Language is my edge; ML and cloud are my tools.**  
 I build AI end to end, from training models to serving them in production.
@@ -92,7 +92,7 @@ I build AI end to end, from training models to serving them in production.
 ## 🎓 Education & Activities
 
 ### 한국외국어대학교 | 융합인재학부
-**2022.03 ~ 2027.08 (재학)**
+**2022.03 ~ 2027.08**
 
 ### SKALA | SK AX
 **2026.07 ~ 2026.12**
@@ -104,15 +104,6 @@ I build AI end to end, from training models to serving them in production.
 
 - AI/ML 이론 교육 및 온라인 해커톤 참여
 
-### LG Aimers LLM Compression
-**2026.01 ~ 2026.02**
-
-- 대규모 언어 모델 경량화(양자화 · 프루닝 · 지식 증류) 주제 심화 과정 이수
-
-### BDA 데이터 분석 입문반 (통계)
-**2025.03 ~ 2025.08**
-
-- 통계 기반 데이터 분석 기초 과정 이수
 
 ### 데이터 분석 학회 DAT | 학회장
 **2025.09 ~ 2026.06**
@@ -129,16 +120,6 @@ I build AI end to end, from training models to serving them in production.
 
 - 대학연합수영동아리 STROKER · 훈련팀 · 2025.03 ~ 현재
 - 한국외국어대학교 수영부 · 부주장 · 2024.01 ~ 2024.08
-
----
-
-## 💼 Experience
-
-### 서울특별시 120다산콜센터재단 | 인턴
-**2024.01 ~ 2024.02**
-
-- 행정업무 보조, 아랍어 번역
-- DeepL · Google Cloud · Kakao i 번역 API 비교 분석 및 보고서 작성
 
 ---
 
@@ -159,8 +140,8 @@ I build AI end to end, from training models to serving them in production.
 
 ## 🌐 Languages
 
-- **English** — OPIc IH (2026.08) · TOEIC Speaking AL (2024.12) · TOEIC 870 (2024.11)
-- **Arabic**
+- **🇬🇧English** — OPIc IH · TOEIC Speaking AL 
+- **🇸🇦Arabic**
 
 ---
 
