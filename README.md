@@ -12,6 +12,14 @@ I build AI end to end, from training models to serving them in production.
   <img src="metrics.terminal.svg" alt="GitHub metrics" />
 </p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/output/pacman-contribution-graph.svg">
+    <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/dainkil/dainkil/output/pacman-contribution-graph.svg">
+  </picture>
+</p>
+
 ---
 
 ## Featured Projects
@@ -167,43 +175,60 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 
 ### AI · ML
 
-<div>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
-  <img src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=for-the-badge&logo=onnx&logoColor=white"/>
-  
-</div>
+<a href="https://skillicons.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=light">
+    <img alt="Python · PyTorch · scikit-learn · ONNX Runtime" src="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=dark">
+  </picture>
+</a>
+<br/>
+<sub>Python · PyTorch · scikit-learn · ONNX Runtime</sub>
 
 ### Backend
 
-<div>
-  <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Spring_AI-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-</div>
+<a href="https://skillicons.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,fastapi&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=java,spring,fastapi&theme=light">
+    <img alt="Java · Spring Boot · Spring AI · FastAPI" src="https://skillicons.dev/icons?i=java,spring,fastapi&theme=dark">
+  </picture>
+</a>
+<br/>
+<sub>Java · Spring Boot · Spring AI · FastAPI</sub>
 
 ### Data & Messaging
 
-<div>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white"/>
-</div>
+<a href="https://skillicons.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,redis,kafka&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=postgres,redis,kafka&theme=light">
+    <img alt="PostgreSQL · Redis · MariaDB · Kafka" src="https://skillicons.dev/icons?i=postgres,redis,kafka&theme=dark">
+  </picture>
+</a>
+<br/>
+<sub>PostgreSQL · Redis · MariaDB · Kafka</sub>
 
 ### Cloud & Infra
 
-<div>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white"/>
-  <img src="https://img.shields.io/badge/AWS_EKS-FF9900?style=for-the-badge"/>
-</div>
+<a href="https://skillicons.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=docker,kubernetes,aws&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=docker,kubernetes,aws&theme=light">
+    <img alt="Docker · Kubernetes · AWS EKS" src="https://skillicons.dev/icons?i=docker,kubernetes,aws&theme=dark">
+  </picture>
+</a>
+<br/>
+<sub>Docker · Kubernetes · AWS EKS</sub>
 
 ### Frontend & Tools
 
-<div>
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</div>
+<a href="https://skillicons.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vue,git,github&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=vue,git,github&theme=light">
+    <img alt="Vue.js · Git · GitHub" src="https://skillicons.dev/icons?i=vue,git,github&theme=dark">
+  </picture>
+</a>
+<br/>
+<sub>Vue.js · Git · GitHub</sub>

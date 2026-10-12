@@ -1,0 +1,30 @@
+name: Pac-Man
+on:
+  schedule: [{cron: "30 15 * * *"}]  # 매일 00:30 KST
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths: [".github/workflows/pacman.yml"]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      # 기여 그래프로 라이트/다크 SVG 생성 → dist/
+      - name: Generate Pac-Man contribution graph
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          games: pacman
+
+      # README는 output 브랜치의 SVG를 참조
+      - name: Push SVGs to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
