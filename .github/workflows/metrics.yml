@@ -1,0 +1,44 @@
+name: Metrics
+on:
+  schedule: [{cron: "0 15 * * *"}]  # 매일 00:00 KST
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths: [".github/workflows/metrics.yml"]
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # 터미널 템플릿 (repositories·achievements 플러그인은 classic 전용이라 따로 렌더)
+      - name: Terminal
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.terminal.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          template: terminal
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Seoul
+
+      - name: Featured repositories
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.repositories.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_repositories: yes
+          plugin_repositories_featured: sjw-translator, kbo-pitch-command-prediction, ASL_translator, GNN_Fraud_Detection
+          config_timezone: Asia/Seoul
+
+      - name: Achievements
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: C
+          config_timezone: Asia/Seoul
