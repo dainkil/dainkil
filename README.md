@@ -30,10 +30,6 @@ I build AI end to end, from training models to serving them in production.
 | ⚾ | [**KBO Pitch Command**](https://github.com/dainkil/kbo-pitch-command-prediction) | LG Aimers 9기 해커톤 · 투구 제구등급 예측 | 최종 Score **70.314 · 팀 최고** |
 | 🕌 | [**ShariahGuard**](https://github.com/dainkil/sharia-guard) | 샤리아·할랄 컴플라이언스 탐지 Kafka MSA | 구독 모델별 **비동기 판정 + 감사 이력** |
 
-<p align="center">
-  <img src="metrics.repositories.svg" alt="Featured repositories" />
-</p>
-
 ---
 
 ### 📜 [SJW Translator](https://github.com/dainkil/sjw-translator) | 인물 KB로 LLM 인명 환각을 억제한 《승정원일기》 번역 시스템
@@ -177,13 +173,13 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 
 <a href="https://skillicons.dev">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=light">
-    <img alt="Python · PyTorch · scikit-learn · ONNX Runtime" src="https://skillicons.dev/icons?i=py,pytorch,sklearn&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,pytorch&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,pytorch&theme=light">
+    <img alt="Python · PyTorch · ONNX Runtime" src="https://skillicons.dev/icons?i=py,pytorch&theme=dark">
   </picture>
 </a>
 <br/>
-<sub>Python · PyTorch · scikit-learn · ONNX Runtime</sub>
+<sub>Python · PyTorch · ONNX Runtime</sub>
 
 ### Backend
 

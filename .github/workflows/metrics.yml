@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      # 터미널 템플릿 (repositories 플러그인은 classic 전용이라 따로 렌더)
+      # 터미널 템플릿
       - name: Terminal
         uses: lowlighter/metrics@latest
         with:
@@ -20,14 +20,4 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           template: terminal
           base: header, activity, community, repositories, metadata
-          config_timezone: Asia/Seoul
-
-      - name: Featured repositories
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.repositories.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_repositories: yes
-          plugin_repositories_featured: sjw-translator, kbo-pitch-command-prediction, ASL_translator, GNN_Fraud_Detection
           config_timezone: Asia/Seoul
