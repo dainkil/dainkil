@@ -9,10 +9,6 @@ I build AI end to end, from training models to serving them in production.
 데이터 구축부터 모델 학습, 클라우드 서빙까지 직접 해왔습니다.
 
 <p align="center">
-  <img src="metrics.svg" alt="GitHub metrics" />
-</p>
-
-<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/output/pacman-contribution-graph-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/output/pacman-contribution-graph.svg">
@@ -228,3 +224,20 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 </a>
 <br/>
 <sub>Vue.js · Git · GitHub</sub>
+
+### Languages
+
+<!-- LANGUAGES:START -->
+```text
+Python            █████████████░░░░░░░░░░░░   52.3%
+Java              █████░░░░░░░░░░░░░░░░░░░░   20.1%
+Vue               ██░░░░░░░░░░░░░░░░░░░░░░░    7.8%
+HTML              █░░░░░░░░░░░░░░░░░░░░░░░░    4.7%
+JavaScript        █░░░░░░░░░░░░░░░░░░░░░░░░    3.6%
+Jupyter Notebook  █░░░░░░░░░░░░░░░░░░░░░░░░    3.2%
+PLpgSQL           █░░░░░░░░░░░░░░░░░░░░░░░░    2.9%
+Shell             █░░░░░░░░░░░░░░░░░░░░░░░░    2.9%
+Other             █░░░░░░░░░░░░░░░░░░░░░░░░    2.5%
+```
+<sub>레포 16개의 코드량(bytes) 기준 · 매시간 자동 갱신</sub>
+<!-- LANGUAGES:END -->

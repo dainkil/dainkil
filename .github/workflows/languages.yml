@@ -1,0 +1,30 @@
+name: Languages
+on:
+  schedule: [{cron: "17 * * * *"}]  # 매시간 (다른 레포 push는 여기서 직접 못 받아서 주기적으로 확인)
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths: [".github/workflows/languages.yml", ".github/scripts/languages.py"]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # README의 LANGUAGES 마커 사이를 언어 비중으로 다시 씀
+      - name: Update language stats
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+        run: python3 .github/scripts/languages.py "${{ github.repository_owner }}" README.md
+
+      # 비중이 바뀐 경우에만 커밋
+      - name: Commit
+        run: |
+          git diff --quiet README.md && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update language stats [skip ci]"
+          git push
