@@ -9,7 +9,7 @@ I build AI end to end, from training models to serving them in production.
 데이터 구축부터 모델 학습, 클라우드 서빙까지 직접 해왔습니다.
 
 <p align="center">
-  <img src="metrics.terminal.svg" alt="GitHub metrics" />
+  <img src="metrics.svg" alt="GitHub metrics" />
 </p>
 
 <p align="center">
@@ -173,9 +173,9 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 
 <a href="https://skillicons.dev">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,pytorch&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py,pytorch&theme=light">
-    <img alt="Python · PyTorch · ONNX Runtime" src="https://skillicons.dev/icons?i=py,pytorch&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cpytorch&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Cpytorch&theme=light">
+    <img alt="Python · PyTorch · ONNX Runtime" src="https://skillicons.dev/icons?i=py%2Cpytorch&theme=dark">
   </picture>
 </a>
 <br/>
@@ -185,9 +185,9 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 
 <a href="https://skillicons.dev">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,spring,fastapi&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=java,spring,fastapi&theme=light">
-    <img alt="Java · Spring Boot · Spring AI · FastAPI" src="https://skillicons.dev/icons?i=java,spring,fastapi&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java%2Cspring%2Cfastapi&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=java%2Cspring%2Cfastapi&theme=light">
+    <img alt="Java · Spring Boot · Spring AI · FastAPI" src="https://skillicons.dev/icons?i=java%2Cspring%2Cfastapi&theme=dark">
   </picture>
 </a>
 <br/>
@@ -197,9 +197,9 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 
 <a href="https://skillicons.dev">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,redis,kafka&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=postgres,redis,kafka&theme=light">
-    <img alt="PostgreSQL · Redis · MariaDB · Kafka" src="https://skillicons.dev/icons?i=postgres,redis,kafka&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres%2Credis%2Ckafka&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=postgres%2Credis%2Ckafka&theme=light">
+    <img alt="PostgreSQL · Redis · MariaDB · Kafka" src="https://skillicons.dev/icons?i=postgres%2Credis%2Ckafka&theme=dark">
   </picture>
 </a>
 <br/>
@@ -209,9 +209,9 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 
 <a href="https://skillicons.dev">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=docker,kubernetes,aws&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=docker,kubernetes,aws&theme=light">
-    <img alt="Docker · Kubernetes · AWS EKS" src="https://skillicons.dev/icons?i=docker,kubernetes,aws&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=docker%2Ckubernetes%2Caws&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=docker%2Ckubernetes%2Caws&theme=light">
+    <img alt="Docker · Kubernetes · AWS EKS" src="https://skillicons.dev/icons?i=docker%2Ckubernetes%2Caws&theme=dark">
   </picture>
 </a>
 <br/>
@@ -221,9 +221,9 @@ LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽�
 
 <a href="https://skillicons.dev">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vue,git,github&theme=dark">
-    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=vue,git,github&theme=light">
-    <img alt="Vue.js · Git · GitHub" src="https://skillicons.dev/icons?i=vue,git,github&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vue%2Cgit%2Cgithub&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=vue%2Cgit%2Cgithub&theme=light">
+    <img alt="Vue.js · Git · GitHub" src="https://skillicons.dev/icons?i=vue%2Cgit%2Cgithub&theme=dark">
   </picture>
 </a>
 <br/>

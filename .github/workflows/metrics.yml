@@ -12,12 +12,19 @@ jobs:
     permissions:
       contents: write
     steps:
-      # 터미널 템플릿
-      - name: Terminal
+      # classic 템플릿: 헤더 + 주 사용 언어 + 커밋 습관
+      - name: Metrics
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.terminal.svg
+          filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          template: terminal
-          base: header, activity, community, repositories, metadata
+          base: header
           config_timezone: Asia/Seoul
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_days: 30
