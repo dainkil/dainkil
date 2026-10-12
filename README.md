@@ -8,44 +8,62 @@ I build AI end to end, from training models to serving them in production.
 언어를 깊이 이해하는 것이 제 강점이고, 그 강점으로 AI를 만듭니다.  
 데이터 구축부터 모델 학습, 클라우드 서빙까지 직접 해왔습니다.
 
+<p align="center">
+  <img src="metrics.terminal.svg" alt="GitHub metrics" />
+</p>
+
 ---
 
 ## Featured Projects
 
 | | Project | What | Highlight |
 |:-:|---|---|---|
-| 📜 | [**SJW Translator**](https://github.com/dainkil/sjw_traslator) | 인물 KB로 LLM 환각을 억제한 《승정원일기》 번역 시스템 | 인명 정확도 **90.4% → 97.1%** |
+| 📜 | [**SJW Translator**](https://github.com/dainkil/sjw-translator) | 인물 KB로 LLM 인명 환각을 억제한 《승정원일기》 번역 시스템 | 인명 정확도 **86.9% → 92.3%** · KB 등재 인물 **99.0%** |
 | ⚾ | [**KBO Pitch Command**](https://github.com/dainkil/kbo-pitch-command-prediction) | LG Aimers 9기 해커톤 · 투구 제구등급 예측 | 최종 Score **70.314 · 팀 최고** |
 | 🕌 | [**ShariahGuard**](https://github.com/dainkil/sharia-guard) | 샤리아·할랄 컴플라이언스 탐지 Kafka MSA | 구독 모델별 **비동기 판정 + 감사 이력** |
 
+<p align="center">
+  <img src="metrics.repositories.svg" alt="Featured repositories" />
+</p>
+
 ---
 
-### 📜 [SJW Translator](https://github.com/dainkil/sjw_traslator) | 인물 KB로 LLM 환각을 억제한 《승정원일기》 번역 시스템
+### 📜 [SJW Translator](https://github.com/dainkil/sjw-translator) | 인물 KB로 LLM 인명 환각을 억제한 《승정원일기》 번역 시스템
 > 한문 원문의 인명을 NER과 인물 지식베이스(KB)로 확정해 LLM에 주입하고,  
 > 번역문에 올바르게 반영됐는지 매 응답 검증하는 번역 서빙 시스템
 
-`2026.03 – 2026.09` · 4인 팀 · **담당: KB 구축 · 모델링 · 백엔드 · 모델 서빙**
+`2026.03 – 2026.09` · 4인 팀 · **담당: KB 구축 · 모델링 · 백엔드 · 모델 서빙** · `2026.10` 평가 재설계 · KB 확장
+
+《승정원일기》(2억 4,250만 자)는 국역률 37.4%로, 지금 속도면 완역까지 2062년이 걸립니다.
+LLM 단독 번역은 드문 한자 이름을 그럴듯한 다른 음으로 읽고(崔葕 최**헌** → 최**연**, 沈詻 심**악** → 심**액**),
+번역문 자체는 자연스러워서 검수에서도 잘 걸러지지 않습니다. 그래서 언어 변환은 LLM에, 인명 확정은 검증 가능한 KB에 맡겼습니다.
 
 ```
 원문 → NER(인명 위치) → KB 링킹(인물 확정) → 프롬프트에 인명 주입 → LLM 번역 → 품질 게이트(인명 반영 검증)
 ```
 
-- 인조 연간 인물 2,690명 KB와 표기 변형 역색인(9,403키) 구축, 역색인 → 활동 시기 → 관직 3단계 엔티티 링킹
-- NER 도메인 적응·파인튜닝, 인명 정확도 지표(ETS) 설계, 프롬프트 구성 요소별 통제 실험 (조건별 3회 반복 중앙값 판정)
-- 추가 LLM 호출 없이 인명 반영을 판정하는 품질 게이트로 모든 응답에 VERIFIED / DEGRADED / REJECTED 등급 부여
-- Spring Boot API/Worker + Redis Streams 비동기 큐, 체크포인트 기반 대량 번역 재개, 429 응답의 원인별 실패 분류
-- NER을 ONNX INT8로 경량화해 GPU 없이 CPU만으로 서빙, Docker Compose · Kubernetes 배포
-
 | 항목 | 기준 | 결과 |
 |---|---|---|
-| 인명 정확도 (ETS) | LLM 단독 90.4% | **97.1%** (인명 오류 10 → 3건) |
+| 인명 정확도 · KB 등재 인물 | LLM 단독 91.9% | **99.0%** (인명 오류 8 → 1건) |
+| 인명 정확도 · 전체 이름 | LLM 단독 86.9% | **92.3%** (+5.4%p, 95% CI [+1.2, +9.2]) |
 | 번역 품질 (chrF) | 37.90 | **40.32** (입력 토큰 −11.2%) |
 | NER 추론 지연 (p50) | PyTorch 17.9ms | **8.3ms** (인명 재현율 100% 유지) |
 | NER 모델 크기 | 709MB | **178MB** |
+| 인물 KB (오프라인 확장) | 2,690명 | **6,718명** (자동 승격분 정밀도 97.4%) |
 | 대량 번역 재개 | — | 강제 종료 후 재개 시 **중복 LLM 호출 0건** |
 
+<sub>인명 정확도는 전문가 국역 표기로 만든 독립 정답지 기준 예비 결과입니다(47문장 · 130명, 3회 반복). 같은 조건의 300문장 A/B는 판정 규칙을 실행 전에 사전 등록해 두었습니다.</sub>
+
+- **NER · KB 링킹** — NER 도메인 적응 · 파인튜닝, 인조 연간 인물 2,690명 KB와 표기 변형 역색인(9,403키), 역색인 → 활동 시기 → 관직 3단계 링킹. 이름 경계 · 동음이의 모호성을 막으려고 벡터 DB/RAG 대신 결정론적 정확 일치를 택함
+- **평가 재설계** — 기존 정답지가 KB 표기를 정답으로 쓰고 KB 밖 이름 151건이 빠져 있어, 종전 97.1%가 사실상 "LLM이 KB를 옮겨 적었는가"를 재고 있었음을 발견. 전문가 국역 표기 기준 독립 정답지(527명)를 다시 만들어 KB 등재 / 미등재 구간으로 재채점 → 남은 오류 10건 중 9건이 KB 밖 이름, **병목이 LLM이 아니라 KB 커버리지**임을 확인
+- **오프라인 KB 확장 (CRAG-inspired, LLM 0회)** — 코퍼스 52,764문장 전수 NER로 KB 밖 인명을 찾고, 같은 행 국역의 한글 표기를 투표 · 합의율로 등급화해 High 4,028명만 자동 승격. 시기 분할(재위 1–20년에서 수집 → 21–27년 평가) 커버리지 25–33%를 일반화 크기로 따로 보고
+- **프롬프트 · 품질 게이트** — 구성 요소별 통제 실험(판정 기준 사전 고정, 3회 반복 중앙값)으로 v4 채택. 추가 LLM 호출 없이 인명 반영을 판정해 모든 응답에 VERIFIED / DEGRADED / REJECTED 등급 부여 (전문가 번역 대상 오탐률 3.9%)
+- **백엔드** — Spring Boot API/Worker + Redis Streams 비동기 큐, 체크포인트 기반 대량 번역 재개, 같은 429 응답을 분당 · 일일 · 월 한도로 나눠 재시도 / 일시정지 / 격리. 워커 1대와 2대의 처리량이 같아(23.4 vs 23.1 jobs/min, 상한은 외부 API 한도) 1대로 고정
+- **서빙 · 배포** — NER을 ONNX INT8로 경량화해 GPU 없이 CPU만으로 서빙, 멀티스테이지 빌드로 API · Worker 이미지 약 600MB → 180MB. SKALA EKS에 공개 배포해 TLS · HSTS, API 키 + 사용자 LLM 키(BYOK) 접근 제어, 캐시 히트 1ms(미스 2,018ms)를 검증
+- 설계 결정 23건을 [ADR](https://github.com/dainkil/sjw-translator/tree/main/docs/adr)로 기록
+
 **Tech**  
-`Python` `PyTorch` `ONNX Runtime` `Gemini API` `Java 21` `Spring Boot` `Spring AI` `Redis Streams` `PostgreSQL` `Docker` `Kubernetes`
+`Python` `PyTorch` `ONNX Runtime` `FastAPI` `Gemini API` `Java 21` `Spring Boot` `Spring AI` `Resilience4j` `Redis Streams` `PostgreSQL` `Flyway` `Docker` `Kubernetes`
 
 ---
 
