@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      # classic 템플릿: 헤더 + 주 사용 언어 + 커밋 습관
+      # classic 템플릿: 헤더 + 주 사용 언어 + 코드 변경량 추이
       - name: Metrics
         uses: lowlighter/metrics@latest
         with:
@@ -24,7 +24,8 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_details: percentage
           plugin_languages_limit: 8
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_days: 30
+          # habits는 GitHub PushEvent 응답에서 commits가 빠져 upstream에서 깨짐
+          # lines repositories 섹션은 private 레포 이름이 노출돼서 history만 사용
+          plugin_lines: yes
+          plugin_lines_sections: history
+          plugin_lines_delay: 10
