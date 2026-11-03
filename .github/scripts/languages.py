@@ -64,7 +64,7 @@ def render(totals, repo_count):
         "```text",
         *lines,
         "```",
-        f"<sub>레포 {repo_count}개의 코드량(bytes) 기준 · 매시간 자동 갱신</sub>",
+        f"<sub>By code size (bytes) across {repo_count} repos · updated hourly</sub>",
         END,
     ])
 
