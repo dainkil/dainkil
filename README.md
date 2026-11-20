@@ -148,15 +148,15 @@ Tashkeel Check uses a reading only when there is evidence for it (customer pronu
 
 <!-- LANGUAGES:START -->
 ```text
-Python            ███████████████░░░░░░░░░░   59.4%
-Java              ██████░░░░░░░░░░░░░░░░░░░   24.3%
-HTML              █░░░░░░░░░░░░░░░░░░░░░░░░    5.0%
-Vue               █░░░░░░░░░░░░░░░░░░░░░░░░    3.2%
-Jupyter Notebook  █░░░░░░░░░░░░░░░░░░░░░░░░    2.3%
-Shell             █░░░░░░░░░░░░░░░░░░░░░░░░    2.2%
-JavaScript        █░░░░░░░░░░░░░░░░░░░░░░░░    2.1%
-Go                ░░░░░░░░░░░░░░░░░░░░░░░░░    0.8%
-Other             ░░░░░░░░░░░░░░░░░░░░░░░░░    0.8%
+Python            █████████████░░░░░░░░░░░░   50.0%
+Java              ██████░░░░░░░░░░░░░░░░░░░   22.0%
+TypeScript        ███░░░░░░░░░░░░░░░░░░░░░░   12.0%
+HTML              ██░░░░░░░░░░░░░░░░░░░░░░░    6.2%
+Vue               █░░░░░░░░░░░░░░░░░░░░░░░░    2.7%
+Jupyter Notebook  ░░░░░░░░░░░░░░░░░░░░░░░░░    1.9%
+Shell             ░░░░░░░░░░░░░░░░░░░░░░░░░    1.8%
+JavaScript        ░░░░░░░░░░░░░░░░░░░░░░░░░    1.8%
+Other             ░░░░░░░░░░░░░░░░░░░░░░░░░    1.5%
 ```
 <sub>By code size (bytes) across 9 repos · updated hourly</sub>
 <!-- LANGUAGES:END -->
