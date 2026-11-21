@@ -144,15 +144,15 @@ I build AI end to end, from training models to serving them in production.
 
 <!-- LANGUAGES:START -->
 ```text
-Python            █████████████░░░░░░░░░░░░   50.0%
-Java              ██████░░░░░░░░░░░░░░░░░░░   22.0%
-TypeScript        ███░░░░░░░░░░░░░░░░░░░░░░   12.0%
-HTML              ██░░░░░░░░░░░░░░░░░░░░░░░    6.2%
-Vue               █░░░░░░░░░░░░░░░░░░░░░░░░    2.7%
-Jupyter Notebook  ░░░░░░░░░░░░░░░░░░░░░░░░░    1.9%
-Shell             ░░░░░░░░░░░░░░░░░░░░░░░░░    1.8%
+Python            █████████████░░░░░░░░░░░░   51.7%
+Java              ██████░░░░░░░░░░░░░░░░░░░   23.3%
+Kotlin            ██░░░░░░░░░░░░░░░░░░░░░░░    8.8%
+HTML              ██░░░░░░░░░░░░░░░░░░░░░░░    6.4%
+Vue               █░░░░░░░░░░░░░░░░░░░░░░░░    2.8%
+Jupyter Notebook  ░░░░░░░░░░░░░░░░░░░░░░░░░    2.0%
+Shell             ░░░░░░░░░░░░░░░░░░░░░░░░░    1.9%
 JavaScript        ░░░░░░░░░░░░░░░░░░░░░░░░░    1.8%
-Other             ░░░░░░░░░░░░░░░░░░░░░░░░░    1.5%
+Other             ░░░░░░░░░░░░░░░░░░░░░░░░░    1.3%
 ```
 <sub>By code size (bytes) across 9 repos · updated hourly</sub>
 <!-- LANGUAGES:END -->
