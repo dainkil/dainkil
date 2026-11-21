@@ -1,6 +1,6 @@
 # Dain Kil
 
-### AI Engineer · NLP 
+### AI Developer · NLP
 
 **Language is my edge; ML and cloud are my tools.**  
 I build AI end to end, from training models to serving them in production.
@@ -17,68 +17,64 @@ I build AI end to end, from training models to serving them in production.
 
 ## 📌 Pinned
 
-| | Project | What | Highlight |
-|:-:|---|---|---|
-| 📜 | [**SJW Translator**](https://github.com/dainkil/sjw-translator) | Translation system for the *Seungjeongwon Ilgi* that curbs LLM name hallucination with a person KB | Name accuracy **86.9% → 92.3%** · KB-listed names **99.0%** |
-| ⚾ | [**KBO Pitch Command**](https://github.com/dainkil/kbo-pitch-command-prediction) | LG Aimers 9th hackathon · pitch command grade prediction | Final score **70.314 · team best** |
-| 🗣 | [**Tashkeel Check**](https://github.com/dainkil/tashkeel-check) | Front-end layer that makes Arabic voice agents read names correctly | Readings fixed by **evidence**, not guessed |
+<p align="center">
+<a href="https://github.com/dainkil/contexa"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/contexa-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/contexa-light.svg"><img alt="contexa" src="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/contexa-light.svg" width="49%"></picture></a>
+<a href="https://github.com/dainkil/sjw-translator"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/sjw-translator-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/sjw-translator-light.svg"><img alt="sjw-translator" src="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/sjw-translator-light.svg" width="49%"></picture></a>
+<br/>
+<a href="https://github.com/dainkil/kbo-pitch-command-prediction"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/kbo-pitch-command-prediction-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/kbo-pitch-command-prediction-light.svg"><img alt="kbo-pitch-command-prediction" src="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/kbo-pitch-command-prediction-light.svg" width="49%"></picture></a>
+<a href="https://github.com/dainkil/tashkeel-check"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/tashkeel-check-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/tashkeel-check-light.svg"><img alt="tashkeel-check" src="https://raw.githubusercontent.com/dainkil/dainkil/main/assets/pins/tashkeel-check-light.svg" width="49%"></picture></a>
+</p>
+
+---
+
+## 🧩 Projects
+
+### 🗂 [Contexa](https://github.com/dainkil/contexa) | Decisions from multilingual meetings
+> Pulls decisions, conditions and to-dos out of Korean · English · Arabic meeting notes; only what a person confirms against the source becomes "the current decision"
+
+`Nov 2026 –` · solo · v0.1.0, runs locally (deployment planned)
+
+- Android app (Compose) + Spring Boot server + Python AI worker (Claude); AI only proposes candidates, humans confirm
+- Optimistic locking, idempotency keys and leased jobs guard against concurrent edits, double taps and dead workers
+
+**Tech** `Kotlin` `Jetpack Compose` `Java 21` `Spring Boot` `PostgreSQL` `Python` `Claude API`
 
 ---
 
 ### 📜 [SJW Translator](https://github.com/dainkil/sjw-translator) | Name-grounded translation of the *Seungjeongwon Ilgi*
-> Resolves person names in Classical Chinese source text with NER and a person knowledge base (KB),  
-> injects them into the LLM prompt, and checks every response for whether the names came through correctly
+> NER + a person knowledge base resolve names in Classical Chinese, inject them into the LLM prompt, and a quality gate checks every name
 
-`Mar – Sep 2026` · team of 4 · **My role: KB, modeling, backend, model serving** · `Oct 2026` evaluation redesign · KB expansion
+`Mar – Sep 2026` · team of 4 · **My role: KB, modeling, backend, model serving**
 
-The *Seungjeongwon Ilgi* (242.5M characters) is only 37.4% translated; at the current pace it won't be finished until 2062.
-An LLM alone reads rare Chinese-character names as plausible but wrong Korean names (崔葕 Choe **Heon** → Choe **Yeon**), and because the output reads naturally, reviewers rarely catch it. So the LLM handles the language and a verifiable KB decides the names.
+- **Name accuracy** 86.9% → **92.3%** (KB-listed names **99.0%**); evaluation redesign showed the bottleneck was KB coverage, not the LLM
+- **KB expansion** without LLM calls: **2,690 → 6,718 people** (precision 97.4%)
+- **Serving:** ONNX INT8 NER (709MB → **178MB**, p50 **8.3ms**), Spring Boot on Redis Streams, deployed on EKS
 
-```
-Source → NER (name spans) → KB linking (resolve person) → inject names into prompt → LLM translation → quality gate (name check)
-```
-
-- **Name accuracy:** KB-listed names 91.9% → **99.0%**, all names 86.9% → **92.3%** (+5.4%p, 95% CI [+1.2, +9.2]) against an independent answer key built from the expert translation (preliminary, 47 sentences · 130 names)
-- **Evaluation redesign:** found that the old answer key used KB spellings as ground truth, so it was measuring whether the LLM copied the KB. Re-scoring on the new key showed 9 of the 10 remaining errors were names missing from the KB: **the bottleneck was KB coverage, not the LLM**
-- **Offline KB expansion (no LLM calls):** ran NER over all 52,764 corpus sentences and promoted out-of-KB names by voting on the translation's spellings → KB **2,690 → 6,718 people** (auto-promoted precision 97.4%)
-- **Serving:** NER quantized to ONNX INT8 (709MB → **178MB**, p50 17.9ms → **8.3ms**) for CPU-only serving; Spring Boot API/Worker on Redis Streams with checkpointed bulk-translation resume (**0 duplicate LLM calls**); deployed on EKS with TLS and API-key + BYOK access control
-
-**Tech**  
-`Python` `PyTorch` `ONNX Runtime` `FastAPI` `Gemini API` `Java 21` `Spring Boot` `Spring AI` `Redis Streams` `PostgreSQL` `Docker` `Kubernetes`
+**Tech** `Python` `PyTorch` `ONNX Runtime` `FastAPI` `Gemini API` `Spring Boot` `Redis Streams` `Kubernetes`
 
 ---
 
 ### ⚾ [KBO Pitch Command Prediction](https://github.com/dainkil/kbo-pitch-command-prediction) | LG Aimers 9th hackathon
-> Predicted the command grade (Shadow / Heart / Failure) probabilities of KBO pitches and a pitcher ranking  
-> from just 29 pre-pitch columns, in a 24-hour offline hackathon (DACON)
+> Command grade (Shadow / Heart / Failure) probabilities and a pitcher ranking from 29 pre-pitch columns, in 24 hours
 
-`Sep 2026` · team of 4 (miniL) · **Final score 70.314, team best** · **+1.79** over the host baseline
+`Sep 2026` · team of 4 · **Final 70.314, team best** · +1.79 over baseline
 
-- Broke the metric down and found the Pitch term (Brier) was saturated; the score gap came from the **pitcher ranking (Kendall τ)**, so I reframed the problem around it
-- Proposed **separating probability q from the pitcher target score t by projection** → Player **+4.9**, adopted as the team's base structure
-- Designed a **ball-count row term** by ridge-regressing pitcher residuals on row state → Player **+1.08**, adopted as a standard team component
-- Assembled and submitted the final model 18 minutes before the deadline with no downside risk
+- Found the score gap was in the **pitcher ranking (Kendall τ)**, not the pitch term, and reframed around it
+- Projection-based split of probability and pitcher score (**+4.9**) and a ball-count row term (**+1.08**), both adopted by the team
 
-**Tech**  
-`Python` `LightGBM` `pandas` `NumPy` `scikit-learn` `SciPy` `Empirical Bayes` `Kendall τ`
+**Tech** `Python` `LightGBM` `pandas` `scikit-learn` `Empirical Bayes`
 
 ---
 
 ### 🗣 [Tashkeel Check](https://github.com/dainkil/tashkeel-check) | Name pronunciation layer for Arabic TTS
-> Sits in front of the TTS engine of an Arabic voice agent, decides the correct reading of every proper name with evidence,  
-> and flags low-confidence names for human confirmation
+> Decides how each proper name is read, from evidence, before the TTS engine guesses; unsure names go to human review
 
-`Oct 2026 –` · **In design** (pivoted on 2026-10-23 from a shipped document-review service)
+`Oct 2026 –` · **In design** (pivoted from a document-review service)
 
-Arabic omits short vowels, so the same spelling can be read several ways (مسلم: Muslim or Musallam?). TTS engines guess silently, and diacritizers and LLMs fail most often on exactly these proper names.
-Tashkeel Check uses a reading only when there is evidence for it (customer pronunciation dictionary, the person's own recording, Latin spelling on registration documents, human confirmation); otherwise it sends a default reading marked low-confidence and queues it for review.
+- Found an instruction-only LLM already hit 99.9% on synthetic documents, so value moved to **evidence, verification and reuse**
+- Next: baseline across 4–5 TTS engines × 3 input formats (EXP-006)
 
-- **Previous product:** a review tool showing English reading candidates with evidence for every name in Arabic documents (two agents + company-records MCP + document archive)
-- **Key finding (EXP-003):** an instruction-only LLM already reached 99.9% strict accuracy on synthetic documents, so the product's value moved to **evidence, verification, records, and reuse**
-- **Next:** engine baseline experiment (EXP-006) across 4–5 TTS engines × 3 input formats; pre-registration drafted
-
-**Tech**  
-`Python` `FastAPI` `LangGraph` `LangChain` `MCP` `CAMeL Tools` `Qdrant` `PostgreSQL` `Docker`
+**Tech** `Python` `FastAPI` `LangGraph` `MCP` `CAMeL Tools` `PostgreSQL`
 
 ---
 
