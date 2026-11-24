@@ -144,8 +144,8 @@ I build AI end to end, from training models to serving them in production.
 
 <!-- LANGUAGES:START -->
 ```text
-Python            █████████████░░░░░░░░░░░░   51.7%
-Java              ██████░░░░░░░░░░░░░░░░░░░   23.3%
+Python            █████████████░░░░░░░░░░░░   51.9%
+Java              ██████░░░░░░░░░░░░░░░░░░░   23.2%
 Kotlin            ██░░░░░░░░░░░░░░░░░░░░░░░    8.8%
 HTML              ██░░░░░░░░░░░░░░░░░░░░░░░    6.4%
 Vue               █░░░░░░░░░░░░░░░░░░░░░░░░    2.8%
